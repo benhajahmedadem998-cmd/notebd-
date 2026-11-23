@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil | ISET Djerba — NOTES DB</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="index.html" aria-label="ISET Djerba NOTES DB" class="brand-link">
+        <img class="brand-logo" src="img/logo.png" alt="Logo ISET Djerba"
+             onerror="this.onerror=null;this.src='img/logo.svg';">
+        <span class="brand-copy">
+          <span class="brand-kicker">ISET DJERBA</span>
+          <span class="brand-title">NOTES <b>DB</b></span>
+        </span>
+      </a>
+    </div>
+    <nav aria-label="Navigation principale">
+      <ul class="menu">
+        <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+        <li><a href="#apropos">Présentation</a></li>
+        <li><a href="login.php" class="menu-cta">Connexion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>NOTES <span>DB</span></h1>
+        <div class="sub">ISET DJERBA</div>
+        <p class="lead">
+          Consultez vos notes matière par matière, suivez votre moyenne générale pondérée
+          et pilotez les épreuves depuis une plateforme institutionnelle moderne et fluide.
+        </p>
+        <div class="hero-actions">
+          <a href="login.php" class="cta">Accéder à mon espace</a>
+          <a href="#apropos" class="cta-ghost">Découvrir les espaces</a>
+        </div>
+      </div>
+
+      <svg class="cap" viewBox="0 0 560 420" aria-hidden="true">
+        <rect x="40" y="290" width="470" height="80" rx="12" fill="#0b4fb8"/>
+        <rect x="70" y="300" width="440" height="60" fill="#f1f5f9"/>
+        <rect x="30" y="280" width="90" height="90" rx="22" fill="#0b5ed7"/>
+        <rect x="90" y="200" width="400" height="80" rx="12" fill="#0b5ed7"/>
+        <rect x="120" y="210" width="370" height="60" fill="#f1f5f9"/>
+        <rect x="80" y="195" width="80" height="90" rx="22" fill="#1266e8"/>
+        <path d="M140 130v70c0 25 130 30 150 30s130-5 130-30v-70z" fill="#111827"/>
+        <path d="M10 100 280 10l270 90-270 90z" fill="#0b0f19"/>
+        <path d="M440 100c30 10 30 60 30 130" stroke="#1266e8" stroke-width="8" fill="none"/>
+        <rect x="460" y="225" width="20" height="70" rx="8" fill="#1266e8"/>
+      </svg>
+    </section>
+
+    <section class="bento-section" id="apropos">
+      <div class="bento-grid">
+        <article class="bento-dark">
+          <div>
+            <span class="bento-tag">01 · Espace Enseignant</span>
+            <h2>Pilotez vos matières, épreuves et saisies de notes</h2>
+            <p>
+              Tableau de bord pensé pour les enseignants de l'ISET Djerba : saisie rapide des notes sur 20,
+              mise à jour instantanée, gestion des coefficients et consultation directe du relevé de chaque étudiant.
+            </p>
+          </div>
+          <div class="bento-footer">
+            <a href="login.php" class="cta">Ouvrir l'espace Professeur</a>
+          </div>
+        </article>
+
+        <div class="bento-stack">
+          <article class="bento-card">
+            <span class="bento-tag bento-tag--blue">02 · Espace Étudiant</span>
+            <h3>Relevé complet par matière</h3>
+            <p>
+              Consultez toutes vos notes regroupées par module, vérifiez votre moyenne générale pondérée
+              et imprimez votre relevé officiel en un clic.
+            </p>
+          </article>
+
+          <article class="bento-card">
+            <span class="bento-tag bento-tag--blue">03 · Fiabilité &amp; Responsive</span>
+            <h3>Architecture PHP / MySQL sécurisée</h3>
+            <p>
+              Requêtes SQL préparées PDO, protection CSRF, séparation des rôles Professeur et Étudiant,
+              et interface fluide sur ordinateur, tablette et smartphone.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="currentYear"></span> ISET Djerba — Système de Gestion des Notes &amp; Épreuves
+  </footer>
+  <script>
+    document.getElementById('currentYear').textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

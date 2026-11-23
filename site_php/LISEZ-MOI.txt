@@ -1,0 +1,55 @@
+============================================================
+  ISET DJERBA — NOTES DB (Site 100 % HTML5 / CSS3 / JS / PHP)
+  Zéro TypeScript • Zéro React • Prêt pour XAMPP (htdocs)
+============================================================
+
+1. INSTALLATION DANS XAMPP (htdocs)
+------------------------------------------------------------
+1) Extrayez tout le contenu du fichier ZIP dans :
+     C:\xampp\htdocs\iset_notes\
+   (Alternative WAMP : C:\wamp64\www\iset_notes\)
+
+2) Ouvrez "XAMPP Control Panel" et démarrez :
+   - Apache
+   - MySQL
+
+Logo ISET Djerba :
+- Le logo vectoriel officiel est déjà inclus dans img/logo.svg.
+- Si vous préférez utiliser votre propre image PNG, copiez-la
+  simplement en tant que img/logo.png (détection automatique).
+
+2. BASE DE DONNÉES MYSQL (phpMyAdmin)
+------------------------------------------------------------
+Configuration déjà prête dans connect.inc.php :
+  Hôte : localhost | Base : notes | Utilisateur : root | Mot de passe : (vide)
+
+- NOUVELLE INSTALLATION (recommandé) :
+  1) Ouvrez http://localhost/phpmyadmin
+  2) Cliquez sur l'onglet "Importer"
+  3) Sélectionnez notes.sql puis cliquez sur "Importer"
+
+- BASE "notes" DÉJÀ EXISTANTE :
+  Importez uniquement notes_roles.sql dans votre base "notes".
+
+3. ACCÈS AU SITE & COMPTES DE TEST
+------------------------------------------------------------
+Ouvrez votre navigateur à l'adresse :
+  http://localhost/iset_notes/index.html
+
+Comptes Professeur / Admin (-> dashboard.php + notesProf.php) :
+- prof  / prof123
+- admin / admin123
+
+Comptes Étudiant (-> redirection directe vers notesEtudiant.php) :
+- youssef / etu123  (Youssef Ben Ali #1001)
+- meriem  / etu123  (Meriem Trabelsi #1002)
+- ahmed   / etu123  (Ahmed Gharbi #1003)
+- salma   / etu123  (Salma Jaziri #1004 — profil à compléter)
+- ines    / etu123  (Ines Mansouri #1005)
+
+Conformité Cours Développement Côté Serveur — Chapitre 5 (PDO) :
+- Connexion PDO ($dsn avec host/port/dbname, setAttribute, fermeture $dbh = null).
+- Requêtes préparées nommées + PDO::FETCH_ASSOC explicite.
+- Fonctions partagées centralisées dans fonctions.php (chargé via connect.inc.php) :
+  échappement XSS e(), contrôle CSRF, gestion des rôles, validations, mentions et avatars.
+- Exercice insertM.php (bindParam) : STA (Statistique, 0.4), INF (Informatique, 0.4), ECO (Econométrie, 0.2).

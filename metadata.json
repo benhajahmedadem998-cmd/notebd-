@@ -1,0 +1,6 @@
+{
+  "name": "NOTES DB — ISET Djerba",
+  "description": "Interface web responsive et moderne pour la gestion des matières et épreuves de l'ISET Djerba, avec code source complet HTML, CSS, PHP (niveau débutant) et SQL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
